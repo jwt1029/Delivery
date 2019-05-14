@@ -1,3 +1,5 @@
+package delivery;
+
 /**
  * @메쏘드명 : DeliveryInfo
  * @작성자 : jwt1029

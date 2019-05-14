@@ -1,3 +1,5 @@
+package delivery;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -21,7 +23,7 @@ import java.util.TimerTask;
 import static javafx.css.StyleOrigin.USER_AGENT;
 
 /**
- * @메쏘드명 : DeliveryScanner
+ * @메쏘드명 : delivery.DeliveryScanner
  * @작성자 : jwt1029
  * @작성일자 : 2019-01-30
  * @설명 :

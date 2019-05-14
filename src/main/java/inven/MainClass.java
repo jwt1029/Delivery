@@ -1,26 +1,33 @@
+package inven;
+
+import delivery.Const;
+import delivery.DeliveryScanner;
+
 import java.awt.*;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.util.Timer;
 
 /**
- * @메쏘드명 : MainClass
+ * @메쏘드명 : delivery.MainClass
  * @작성자 : jwt1029
  * @작성일자 : 2019-01-30
  * @설명 :
  */
 public class MainClass {
-    public static void main(String[] args) throws AWTException, MalformedURLException {
+    public static void main(String[] args) throws AWTException, MalformedURLException, UnsupportedEncodingException {
         final int second = 1000;
         Timer t = new Timer();
-        DeliveryScanner deliveryScanner = new DeliveryScanner();
+        UserScanner userScanner = new UserScanner();
 
         // Usage
-        //deliveryScanner.addDeliveryInfo(Const.CARRIER_ID.롯데택배.getID(),"40123150828");
-        //deliveryScanner.addDeliveryInfo(Const.CARRIER_ID.CJ_대한통운.getID(),"33847554905");
+        //deliveryScanner.addDeliveryInfo(delivery.Const.CARRIER_ID.롯데택배.getID(),"401231508285");
+        //deliveryScanner.addDeliveryInfo(Const.CARRIER_ID.CJ_대한통운.getID(),"622232040613");
+        userScanner.addUserInfo("야므");
 
         // This task is scheduled to run every 10 seconds
 
-        t.scheduleAtFixedRate(deliveryScanner, 0, 30 * second);
+        t.scheduleAtFixedRate(userScanner, 0, 10 * second);
 
     }
 
